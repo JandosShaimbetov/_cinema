@@ -1,6 +1,6 @@
 # _cinema
 
-cinema is an online shopping app
+This project is heavily inspired by the cinematica.kg website
 
 Heroku [link]()
 

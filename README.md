@@ -2,7 +2,7 @@
 
 This project is heavily inspired by the cinematica.kg website
 
-Heroku [link]()
+Heroku [link](https://cinema-app119.herokuapp.com/)
 
 ### Prerequisites	
 

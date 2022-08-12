@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  db:
+    image: cinema
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=cinema
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=seaess
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=cinema
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=seaess
+    depends_on:
+      - db
